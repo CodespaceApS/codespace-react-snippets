@@ -6,7 +6,7 @@
 			"import { Text } from 'react-native'",
 			"import Background from '../components/Background'",
 			"",
-			"class ${1}Screen extends React.Component {",
+			"class ${1} extends React.Component {",
 			"  constructor(props) {",
 			"    super(props)",
 			"    this.navigate = props.navigation.navigate",
@@ -19,13 +19,13 @@
 			"  render() {",
 			"    return (",
 			"      <Background>",
-			"        <Text>screen ${1}</Text>",
+			"        <Text> ${1}</Text>",
 			"      </Background>",
 			"    )",
 			"  }",
 			"}",
 			"",
-			"export default ${1}Screen"
+			"export default ${1}"
 		],
 		"description": "screen"
   },

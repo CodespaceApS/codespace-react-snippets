@@ -3,7 +3,7 @@
   "displayName": "Codespace snippets",
   "description": "Snippets we use at Codespace",
   "icon": "images/icon.jpg",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "publisher": "CodespaceApS",
   "engines": {
     "vscode": "^1.14.0"
