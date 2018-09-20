@@ -23,19 +23,146 @@
 		],
     "description": "reactclass"
   },
-    "Fetch with json config": {
-      "prefix": "tagjsonfetch",
-      "body": [
-        "const ${1} = payload =>",
-        "  fetch(${2}, {",
-        "    method: 'POST',",
-        "    headers: {",
-        "      Accept: 'application/json',",
-        "      'Content-Type': 'application/json',",
-        "    },",
-        "    body: JSON.stringify(payload),",
-        "  }).then(x => x.json(x))"
-      ],
-      "description": "Fetch with json config"
-    }
+	"fetch safe": {
+		"prefix": "fetch_safe",
+		"body": [
+			" const ${1} = payload =>",
+			"    fetch(${2}, {",
+			"      method: 'POST',",
+			"      headers: {",
+			"        Accept: 'application/json',",
+			"        'Content-Type': 'application/json',",
+			"      },",
+			"      body: JSON.stringify(payload),",
+			"    })",
+			"    .then(x => x.status === 200 ? x.json() : Promise.reject(x.status))",
+			"    .catch(x => Promise.resolve({success: false, err: x}))"
+		],
+		"description": "fetch safe json"
+	},
+	"fetch safe": {
+		"prefix": "fetch_json",
+		"body": [
+			" const ${1} = payload =>",
+			"    fetch(${2}, {",
+			"      method: 'POST',",
+			"      headers: {",
+			"        Accept: 'application/json',",
+			"        'Content-Type': 'application/json',",
+			"      },",
+			"      body: JSON.stringify(payload),",
+			"    }).then(x=>x.json())"
+		],
+		"description": "fetch safe"
+	},
+		"constructor": {
+			"prefix": "con",
+			"body": [
+				"constructor(props) {",
+				"  super(props)",
+				"  this.state = {}",
+				"}"
+			],
+			"description": "constructor"
+		},
+		"setState": {
+			"prefix": "ss",
+			"body": [
+				"this.setState({${1}})"
+			],
+			"description": "setState"
+		},
+		"React context": {
+			"prefix": "new_context",
+			"body": [
+				"import React from 'react'",
+				"",
+				"export const ${1}Context = React.createContext()",
+				"export class ${1}Provider extends React.Component {",
+				"  constructor(props) {",
+				"    super(props)",
+				"    this.state = {}",
+				"  }",
+				"",
+				"  render() {",
+				"    const { children } = this.props",
+				"    return (",
+				"      <${1}Context.Provider",
+				"        value={{",
+				"          ...this.state,",
+				"          ",
+				"        }}",
+				"      >",
+				"        {children}",
+				"      </${1}Context.Provider>",
+				"    )",
+				"  }",
+				"}",
+				"",
+				"export const withContext = renderFunc => (",
+				"  <${1}Context.Consumer>",
+				"    {context => renderFunc(context)}",
+				"  </${1}Context.Consumer>",
+				")",
+				"",
+				"export const withContextHOC = WrappedComponent => props => {",
+				"  const renderWithContext = context => (",
+				"    <WrappedComponent context={context} {...props} />",
+				"  )",
+				"  return withContext(renderWithContext)",
+				"}",
+				""
+			],
+			"description": "React context"
+		},
+		"New stateless component file": {
+			"prefix": "new_stateless_component_file",
+			"body": [
+				"import React from 'react'",
+				"",
+				"const ${1} = ({}) => (",
+				"",
+				")",
+				"export default ${1}"
+			],
+			"description": "New stateless component file"
+		},
+		"New class component file": {
+			"prefix": "new_class_component_file",
+			"body": [
+				"import React from 'react'",
+				"",
+				"export class ${1} extends React.Component {",
+				" ",
+				"  render() {",
+				"    return ()",
+				"  }",
+				"}"
+			],
+			"description": "New class component file"
+		},
+		"New react native svg icon file": {
+			"prefix": "new_svg_icon_file",
+			"body": [
+				"import React from 'react'",
+				"import { Svg } from 'expo'",
+				"",
+				"const ${1} = () => (",
+				"",
+				")",
+				"",
+				"export default ${1}",
+				""
+			],
+			"description": "New react native svg icon file"
+		},
+		"new styled component": {
+			"prefix": "sc",
+			"body": [
+				"const ${1} = styled.${2}`",
+				"  ${3}",
+				"`"
+			],
+			"description": "new styled component"
+		}
 }

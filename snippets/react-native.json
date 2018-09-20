@@ -1,0 +1,52 @@
+{
+	"screen": {
+		"prefix": "new_react_native_screen",
+		"body": [
+			"import React from 'react'",
+			"import { Text } from 'react-native'",
+			"import Background from '../components/Background'",
+			"",
+			"class ${1}Screen extends React.Component {",
+			"  constructor(props) {",
+			"    super(props)",
+			"    this.navigate = props.navigation.navigate",
+			"  }",
+			"",
+			"  static navigationOptions = {",
+			"    title: '',",
+			"  }",
+			"",
+			"  render() {",
+			"    return (",
+			"      <Background>",
+			"        <Text>screen ${1}</Text>",
+			"      </Background>",
+			"    )",
+			"  }",
+			"}",
+			"",
+			"export default ${1}Screen"
+		],
+		"description": "screen"
+  },
+  "constructor with navigation": {
+    "prefix": "navi_con",
+    "body": [
+      "constructor(props) {",
+      "  super(props)",
+      "  this.navigate = props.navigation.navigate",
+      "  this.state = {}",
+      "}"
+    ],
+    "description": "constructor with navigation"
+  },
+  "navigation options": {
+    "prefix": "navi_screenoptions",
+    "body": [
+      "  static navigationOptions = {",
+      "    title: '',",
+      "  }"
+    ],
+    "description": "navigation options"
+  }
+}

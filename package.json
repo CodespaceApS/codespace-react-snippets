@@ -17,16 +17,24 @@
   "contributes": {
     "snippets": [
       {
-        "language": "javascriptreact",
-        "path": "./snippets/snippets.json"
-      },
-      {
         "language": "json",
         "path": "./snippets/eslint.json"
       },
       {
+        "language": "javascriptreact",
+        "path": "./snippets/snippets.json"
+      },
+      {
         "language": "javascript",
         "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/react-native.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/react-native.json"
       }
     ]
   }
