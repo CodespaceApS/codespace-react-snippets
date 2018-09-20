@@ -3,7 +3,7 @@
   "displayName": "Codespace snippets",
   "description": "Snippets we use at Codespace",
   "icon": "images/icon.jpg",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "CodespaceApS",
   "engines": {
     "vscode": "^1.14.0"
@@ -18,6 +18,10 @@
     "snippets": [
       {
         "language": "javascriptreact",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "json",
         "path": "./snippets/snippets.json"
       },
       {
