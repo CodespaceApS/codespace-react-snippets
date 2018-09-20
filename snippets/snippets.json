@@ -1,0 +1,41 @@
+{
+  "stateless": {
+		"prefix": "stateless",
+		"body": [
+			"const ${1} = () => {",
+			"  return (",
+			"    ${2}",
+			"  )",
+			"}"
+		],
+		"description": "stateless"
+	},
+	"reactclass": {
+		"prefix": "reactclass",
+		"body": [
+			"class ${1} extends React.Component {",
+			"  render(){",
+			"    return (",
+			"      ${2}",
+			"    )",
+			"  }",
+			"}"
+		],
+    "description": "reactclass"
+  },
+    "Fetch with json config": {
+      "prefix": "tagjsonfetch",
+      "body": [
+        "const ${1} = payload =>",
+        "  fetch(${2}, {",
+        "    method: 'POST',",
+        "    headers: {",
+        "      Accept: 'application/json',",
+        "      'Content-Type': 'application/json',",
+        "    },",
+        "    body: JSON.stringify(payload),",
+        "  }).then(x => x.json(x))"
+      ],
+      "description": "Fetch with json config"
+    }
+}
