@@ -3,7 +3,7 @@
   "displayName": "Codespace snippets",
   "description": "Snippets we use at Codespace",
   "icon": "images/icon.jpg",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "publisher": "CodespaceApS",
   "engines": {
     "vscode": "^1.14.0"
@@ -22,7 +22,7 @@
       },
       {
         "language": "json",
-        "path": "./snippets/snippets.json"
+        "path": "./snippets/eslint.json"
       },
       {
         "language": "javascript",

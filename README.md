@@ -13,4 +13,4 @@ Below is a list of all available snippets and the triggers of each one. The **�
 | -------: | ------- |
 | `stateless→`   | stateless component skeleton |
 | `reactclass→`   | class component skeleton |
-| `jsonfetch→`  | fetch with default config |
+| `jsonfetch→`  | fetch with default config |vsce publish
