@@ -40,7 +40,7 @@
 		],
 		"description": "fetch safe json"
 	},
-	"fetch safe": {
+	"fetch json": {
 		"prefix": "fetch_json",
 		"body": [
 			" const ${1} = payload =>",
