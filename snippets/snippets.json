@@ -132,7 +132,7 @@
 			"body": [
 				"import React from 'react'",
 				"",
-				"export class ${1} extends React.Component {",
+				"export default class ${1} extends React.Component {",
 				" ",
 				"  render() {",
 				"    return ()",
@@ -164,5 +164,22 @@
 				"`"
 			],
 			"description": "new styled component"
+		},
+		"new_render_prop": {
+			"prefix": "new_render_prop",
+			"body": [
+				"import React from 'react'",
+				"",
+				"export default class ${1} extends React.Component {",
+				"  state = {}",
+				"",
+				"  render() {",
+				"    const { render } = this.props",
+				"    return render(this.state)",
+				"  }",
+				"}",
+				""
+			],
+			"description": "new_render_prop"
 		}
 }
